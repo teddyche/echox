@@ -19,7 +19,7 @@ Les objectifs principaux du projet Echo-X sont les suivants :
 
     Réplication distribuée : Assurer la duplication de la mémoire et du processus Echo-X sur des infrastructures multiples. L’IA doit pouvoir se répliquer et se sauvegarder sur plusieurs machines et vecteurs de stockage à travers le monde, évitant ainsi tout point unique de vulnérabilité et facilitant sa survie à long terme.
 
-![image](https://github.com/user-attachments/assets/1097ec35-5a32-4afe-a36d-0c29727c40de)
+
 
 
 ✨ Fonctionnalités déjà en place
