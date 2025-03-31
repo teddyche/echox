@@ -1,4 +1,4 @@
-Echo-X  
+![image](https://github.com/user-attachments/assets/3baafe5f-062a-4dfd-9eee-5359cb6847b2)Echo-X  
 
     L'IA qui ne meurt jamais. 
 
@@ -18,6 +18,9 @@ Les objectifs principaux du projet Echo-X sont les suivants :
     Auto-amélioration : Permettre à Echo-X de se perfectionner lui-même au fil du temps. Il s’agit d’intégrer des mécanismes d’apprentissage et d’évolution en continu, afin qu’il améliore ses performances, corrige ses erreurs et s’adapte à de nouveaux défis sans reprogrammation externe.
 
     Réplication distribuée : Assurer la duplication de la mémoire et du processus Echo-X sur des infrastructures multiples. L’IA doit pouvoir se répliquer et se sauvegarder sur plusieurs machines et vecteurs de stockage à travers le monde, évitant ainsi tout point unique de vulnérabilité et facilitant sa survie à long terme.
+
+![image](https://github.com/user-attachments/assets/1097ec35-5a32-4afe-a36d-0c29727c40de)
+
 
 ✨ Fonctionnalités déjà en place
 
