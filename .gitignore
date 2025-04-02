@@ -1,0 +1,41 @@
+# 🔒 Clé & secrets
+.env
+
+# 🧠 Fichiers de mémoire
+memory.json
+memoire_cumulative.json
+chunk_index.json
+dns_chunks.json
+connaissances.json
+
+# 📁 Données utilisateurs
+/data/
+!/data/README.md  # si tu veux laisser un readme explicatif
+
+# 🤖 Modèles LLM
+/models/
+!/models/README.md
+
+# 🗂️ Logs & PID
+*.log
+*.pid
+logs/
+*.bak
+*.backup
+__pycache__/
+
+# 🐍 Venv local
+venv/
+.env/
+
+# 🧪 Fichiers de test / temporaire
+*.tmp
+*.swp
+*.DS_Store
+*.tar.gz
+*.json~
+
+# 🧹 Auto-backups
+*corrupt_backup.json
+dns_results_*.json
+

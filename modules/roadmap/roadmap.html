@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>📋 Roadmap Echo-X</title>
+  <style>
+    body { font-family: sans-serif; background: #111; color: #eee; padding: 2em; }
+    h1 { color: #6cf; }
+    .tache { margin-bottom: 1em; }
+    input[type="text"] { width: 50%; padding: 0.5em; }
+    button { margin-left: 1em; padding: 0.5em 1em; cursor: pointer; }
+    .valide { text-decoration: line-through; opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <h1>📋 Roadmap Echo-X</h1>
+  <div id="liste"></div>
+  <input id="nouvelleTache" placeholder="Nouvelle tâche...">
+  <button onclick="ajouter()">➕ Ajouter</button>
+  <script>
+    let data = {{ roadmap|tojson }};
+    function render() {
+      const liste = document.getElementById('liste');
+      liste.innerHTML = "";
+      data.forEach((tache, i) => {
+        const div = document.createElement("div");
+        div.className = "tache";
+        div.innerHTML = `
+          <input type="checkbox" ${tache.fait ? "checked" : ""} onchange="toggle(${i})">
+          <span class="${tache.fait ? 'valide' : ''}">${tache.titre}</span>
+          <button onclick="supprimer(${i})">❌</button>
+        `;
+        liste.appendChild(div);
+      });
+    }
+    function toggle(i) {
+      data[i].fait = !data[i].fait;
+      sync();
+    }
+    function ajouter() {
+      const champ = document.getElementById("nouvelleTache");
+      const titre = champ.value.trim();
+      if (!titre) return;
+      data.push({ titre, fait: false });
+      champ.value = "";
+      sync();
+    }
+    function supprimer(i) {
+      data.splice(i, 1);
+      sync();
+    }
+    async function sync() {
+      await fetch("/roadmap/update", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      render();
+    }
+    render();
+  </script>
+</body>
+</html>
+
